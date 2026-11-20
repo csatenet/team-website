@@ -1,85 +1,77 @@
 <!DOCTYPE html>
-<html>
-    lang = "en"
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Team Byte : a CSC 216 web development pair.">
-        <title>Home | Team Byte</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <script>
-            src="js/script.js";defer
-        </script>
-    </head>
-    <body>
-        <a class="skip-link" href="css/styles.css"></a>
-        <header class="site-header">
-            <div class="container header-inner">
-                <a class="logo" href="index.html">Team Byte</a>
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-                <nav id="site-nav" class="site-nav" aria-label="Main">
-                    <ul>
-                        <li>
-                            <a href="index.html" aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="projects.html">Projects</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="theme-toggle" type="button" aria-pressed="false">Dark Mode</button>
-            </div>
-        </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Team VOM: a polite, adaptable CSC 216 web development pair.">
+  <title>Home | Team VOM</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-        <main id="main">
-            <section class="hero">
-                <div class="container">
-                    <p class="eyebrow">CSC 216.Lab 2</p>
-                    <h1>We build web applications for your needs</h1>
-                    <p class="lead">We are two Computer Science Students 
-                        learning HTML,CSS and JS.
-                    </p>
-                    <a class="button" href="projects.html">See our projects</a>
-                </div>
-            </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Team VOM</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
 
-            <section class="container-section" aria-labelledby="team-heading">
-                <h2 id="team-heading">Meet the team</h2>
-                <div class="team-grid">
-                    <article class="card">
-                        <div class="avatar" aria-hidden="true">AW</div>
-                        <h3>Samuel Odhiambo</h3>
-                        <p class="role">Solutions Architect</p>
-                        <p>Has a thing for coming up 
-                            coming up with solutions for problems in the real world e.g Tariq Online Shop
-                        </p>
-                    </article>
-                    <article class="card">
-                        <div class="avatar" aria-hidden="true">BO</div>
-                        <h3>Titus kiptum</h3>
-                        <p class="role">Logic and Interaction</p>
-                        <p>Came from C and likes making pages respond to people.</p>
-                    </article>
-                </div>
-            </section>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">CSC 216 · Lab 2</p>
+        <h1>We are problem-solvers in a constantly changing world. We are flexible thinkers who can model any problem and give you the solution that fits you best.</h1>
+        <p class="lead">Divergent thinkers for you—quietly formidable, always courteous.</p>
+        <a class="button" href="projects.html">See our projects</a>
+      </div>
+    </section>
 
-            <section class="container-section" aria-labelledby="learning-heading">
-                <h2 id="learning-heading">What are we learning</h2>
-                <ul class="skill-list">
-                    <li><strong>HTML - </strong>gives a page its structure and meaning</li>
-                    <li><strong>CSS - </strong>controls how the structure looks</li>
-                    <li><strong>JavaScript - </strong>makes the page respond to the user</li>
-                </ul>
-            </section>
-        </main>
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <h2 id="team-heading">Meet the team</h2>
+        <div class="team-grid">
+          <article class="card">
+            <div class="avatar" aria-hidden="true">SO</div>
+            <h3>Samuel Odhiambo</h3>
+            <p class="role">Solutions Architect</p>
+            <p>Has a knack for turning real-world campus challenges into practical software, such as Tariq Online Shop.</p>
+          </article>
+          <article class="card">
+            <div class="avatar" aria-hidden="true">TK</div>
+            <h3>Titus Kiptum</h3>
+            <p class="role">Logic and Interaction</p>
+            <p>Came from C and enjoys making web pages respond smoothly and politely to every visitor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <footer class="site-footer">
-            <div class="container">
-                <p>© <span id="year">2026</span>Team Byte.Built for CSC 216</p>
-            </div>
-        </footer>
-    </body>
+    <section class="section" aria-labelledby="learning-heading">
+      <div class="container">
+        <h2 id="learning-heading">What we are learning</h2>
+        <ul class="skill-list">
+          <li><strong>HTML — </strong>gives a page its structure and meaning.</li>
+          <li><strong>CSS — </strong>controls how the structure looks and adapts across screens.</li>
+          <li><strong>JavaScript — </strong>makes the page respond thoughtfully to the user.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Team VOM. Built for CSC 216.</p>
+    </div>
+  </footer>
+</body>
 </html>

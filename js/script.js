@@ -1,5 +1,3 @@
-
-
 /* =====================================================
    Team website script (CSC 216, Lab 2)
    Loaded on every page with `defer`, so the HTML is
@@ -25,9 +23,9 @@ if (navToggle && siteNav) {
   });
 }
 
-// Dark mode, remembered across pages and visits.
+// Dark mode, remembered across pages and visits (with system preference fallback).
 const themeToggle = document.querySelector('.theme-toggle');
-const THEME_KEY = 'team-theme';
+const THEME_KEY = 'team-vom-theme';
 
 function applyTheme(theme) {
   const isDark = theme === 'dark';
@@ -37,7 +35,9 @@ function applyTheme(theme) {
   }
 }
 
-applyTheme(localStorage.getItem(THEME_KEY));
+const savedTheme = localStorage.getItem(THEME_KEY);
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
@@ -56,10 +56,25 @@ const projects = [
   { title: 'Tip calculator', category: 'js', description: 'Reads two inputs and updates the total as you type.' },
   { title: 'Accessible contact form', category: 'html', description: 'Labelled fields, helpful errors and keyboard-friendly controls.' },
   { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
-  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' }
+  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' },
+  {
+    title: 'Tariq Online Shop',
+    category: 'js',
+    description: 'An application that hostel students can use to place online orders from Tariq Shop in the Student\'s Centre.'
+  },
+  {
+    title: 'Branching & Merge Workflow',
+    category: 'git',
+    description: 'Collaborative version control workflow for feature branches, pull requests, and resolving merge conflicts.'
+  }
 ];
 
-const categoryNames = { html: 'HTML', css: 'CSS', js: 'JavaScript' };
+const categoryNames = {
+  html: 'HTML',
+  css: 'CSS',
+  js: 'JavaScript',
+  git: 'Git'
+};
 
 const projectList = document.querySelector('#project-list');
 const projectCount = document.querySelector('#project-count');
